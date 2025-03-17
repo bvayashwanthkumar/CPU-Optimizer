@@ -1,0 +1,65 @@
+Installed core tools,dependices and verison control
+
+1)Task : Install Core tools
+  # Install Python 3.9+ .
+  # Install a C++ compiler.
+  # Set up an IDE: PyCharm (for Python).
+
+2)Task : Install Dependencies
+  # Create a Python virtual environment: python -m venv cpu_opt_env.
+  # Activate it: source cpu_opt_env/bin/activate (Linux/Mac) or cpu_opt_env\Scripts\activate (Windows).
+  # Install libraries: pip install psutil pyqt5 tensorflow scikit-learn numpy pandas matplotlib seaborn plotly.
+
+  Step-by-Step Process
+
+    1.Create a Project Directory:
+        ->Open your terminal 
+        ->Navigate to a suitable location: cd /path/to/your/projects.
+        ->Create a folder: mkdir cpu_optimization and enter it: cd cpu_optimization.
+
+    2.Set Up a Virtual Environment:
+        ->Keeps project dependencies isolated from your system’s global Python installation.
+        ->Command: python -m venv cpu_opt_env
+        ->This creates a folder cpu_opt_env containing a fresh Python environment.
+
+    3.Install python Dependecies
+        ->Use pip (Python’s package manager) to install required libraries.
+        ->Command: pip install psutil pyqt5 tensorflow scikit-learn numpy pandas matplotlib seaborn plotly
+  
+    4.Verify Installation
+        ->Test one library
+        ->Command: python -c "import psutil; print(psutil.cpu_percent())"
+
+
+3)Task : Initialize Version Control
+  # Initialize a Git repository: git init in the project folder.
+  # Create a .gitignore file to exclude cpu_opt_env/ and temporary files.
+  # Commit initial setup: git add . && git commit -m "Initial project setup".
+
+ Step-by-Step Process
+
+    1.Initialize Git:
+        ->Command: git init
+
+    2.Create a .gitignore File:
+        ->In your project directory, create a file named .gitignore.
+        ->Command: echo cpu_opt_env/ > .gitignore
+        ->This tells Git to ignore the cpu_opt_env folder and its contents.
+        ->Alternatively, open Notepad, type cpu_opt_env/, save as .gitignore (ensure it’s not .gitignore.txt), and place it in the directory.
+
+    3.Verify .gitignore:
+        ->Run dir to confirm .gitignore exists.
+
+    4.Create requirements.txt
+        ->Command: pip freeze > requirements.txt
+        ->This lists all installed packages (e.g., psutil == 5.9.8)
+
+    5.Stage Files:
+        ->Command: git add .gitignore requirements.txt
+        ->This adds only .gitignore and requirements.txt to Git, skipping cpu_opt_env.
+
+    6.Commit:
+        ->Command: git commit -m "Initial setup with virtual environment and dependencies"
+
+    7.Verify the Repository:
+        ->Command: git status
